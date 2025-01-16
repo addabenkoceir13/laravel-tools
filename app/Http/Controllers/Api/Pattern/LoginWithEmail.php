@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Api;
+namespace App\Http\Controllers\Api\Pattern;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -17,7 +17,7 @@ class LoginWithEmail implements LoginInterface
                 'message'       => 'Logged in successfully.'
             ]);
         }
-        
+
         return response()->json(['error' => 'Invalid email or password.'], 401);
     }
 }
